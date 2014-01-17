@@ -36,42 +36,22 @@
 	<string>RussianTransliterator_1_Connection</string>
 	<key>InputMethodServerControllerClass</key>
 	<string>RMInputController</string>
+	<key>tsInputMethodIconFileKey</key>
+	<string>icon.tiff</string>
 	<key>tsInputMethodCharacterRepertoireKey</key>
 	<array>
 		<string>Cyrl</string>
 	</array>
-	<key>tsInputMethodIconFileKey</key>
-	<string>Decimal.tiff</string>
 	<key>ComponentInputModeDict</key>
 	<dict>
 		<key>tsInputModeListKey</key>
 		<dict>
 			<key>com.alexei-baboulevitch.inputmethod.cyrillictranslit</key>
 			<dict>
-				<key>tsInputModeAlternateMenuIconFileKey</key>
-				<string>Decimal.tiff</string>
-				<key>tsInputModeDefaultStateKey</key>
-				<true/>
-				<key>tsInputModeIsVisibleKey</key>
-				<true/>
-				<key>tsInputModeKeyEquivalentKey</key>
-				<string>D</string>
-				<key>tsInputModeKeyEquivalentModifiersKey</key>
-				<integer>4608</integer>
-				<key>tsInputModeMenuIconFileKey</key>
-				<string>Decimal.tiff</string>
-				<key>tsInputModePaletteIconFileKey</key>
-				<string>Decimal.tiff</string>
-				<key>tsInputModePrimaryInScriptKey</key>
-				<true/>
 				<key>tsInputModeScriptKey</key>
 				<string>smCyrillic</string>
 			</dict>
 		</dict>
-		<key>tsVisibleInputModeOrderedArrayKey</key>
-		<array>
-			<string>com.alexei-baboulevitch.inputmethod.cyrillictranslit</string>
-		</array>
 	</dict>
 </dict>
 </plist>
