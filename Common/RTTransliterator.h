@@ -11,8 +11,8 @@
 @property (nonatomic) NSDictionary* languageTree;
 
 -(id) initWithLanguage:(NSString*)language;
--(NSString*) currentValueForString:(NSString*)substring;
--(NSArray*) nextPossibleLettersForString:(NSString*)substring;
--(BOOL) hasNext:(NSString*)substring;
+-(NSString*) currentValueForString:(NSString*)string;
+-(NSArray*) nextPossibleLettersForString:(NSString*)string;
+-(BOOL) hasNext:(NSString*)string;
 
 @end

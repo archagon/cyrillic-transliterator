@@ -97,7 +97,6 @@
 			children = (
 				4EBFBD5C1889EE0F0032D712 /* InfoPlist.strings */,
 				4E03E4891889EDD30013490B /* Cyrillic Transliterator-Info.plist */,
-				4E03E48D1889EDE40013490B /* RU.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -109,6 +108,7 @@
 				4E03E4721889E80C0013490B /* RTTransliterator.m */,
 				4E03E4731889E80C0013490B /* RTTranslitStream.h */,
 				4E03E4741889E80C0013490B /* RTTranslitStream.m */,
+				4E03E48D1889EDE40013490B /* RU.plist */,
 			);
 			path = Common;
 			sourceTree = "<group>";
