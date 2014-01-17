@@ -7,12 +7,27 @@
 //
 
 #import "RMAppDelegate.h"
+#import "RMInputController.h"
 
 @implementation RMAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+-(void) applicationDidFinishLaunching:(NSNotification*)aNotification
 {
-    // Insert code here to initialize your application
+    self.connectionName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"InputMethodConnectionName"];
+    self.server = [[IMKServer alloc] initWithName:self.connectionName bundleIdentifier:[[NSBundle mainBundle] bundleIdentifier]];
+    
+//    RMInputController* testInputController = [[RMInputController alloc] init];
+//    [testInputController inputText:@"s" key:0 modifiers:0 client:nil];
+//    [testInputController inputText:@"h" key:0 modifiers:0 client:nil];
+//    [testInputController inputText:@"h" key:0 modifiers:0 client:nil];
+//    [testInputController inputText:@"h" key:0 modifiers:0 client:nil];
+//    [testInputController inputText:@"h" key:0 modifiers:0 client:nil];
+}
+
+-(void) dealloc
+{
+    self.server = nil;
+    self.connectionName = nil;
 }
 
 @end

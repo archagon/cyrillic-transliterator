@@ -6,10 +6,9 @@
 //  Copyright (c) 2014 Alexei Baboulevitch. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
 @interface RMAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, retain) NSString* connectionName;
+@property (nonatomic, retain) IMKServer* server;
 
 @end
