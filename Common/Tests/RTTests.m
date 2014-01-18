@@ -1,6 +1,6 @@
 //
 //  RTTests.m
-//  Russian Transliterator Input Method
+//  Cyrillic Transliterator
 //
 //  Created by Alexei Baboulevitch on 1/17/14.
 //  Copyright (c) 2014 Alexei Baboulevitch. All rights reserved.
