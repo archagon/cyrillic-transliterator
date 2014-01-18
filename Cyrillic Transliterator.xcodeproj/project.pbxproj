@@ -62,6 +62,7 @@
 		4EBFBD601889EE320032D712 /* icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = icon.tiff; path = "Cyrillic Transliterator Input Method/Assets/icon.tiff"; sourceTree = SOURCE_ROOT; };
 		4EBFBD611889EE320032D712 /* icon@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon@2x.tiff"; path = "Cyrillic Transliterator Input Method/Assets/icon@2x.tiff"; sourceTree = SOURCE_ROOT; };
 		4EBFBD64188B2E000032D712 /* ZZ.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZZ.plist; sourceTree = "<group>"; };
+		4EBFBD67188B33310032D712 /* Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +122,7 @@
 				4E03E4761889E80C0013490B /* RTTests.m */,
 				4EBFBD64188B2E000032D712 /* ZZ.plist */,
 				4E03E4771889E80C0013490B /* Tests-Info.plist */,
+				4EBFBD67188B33310032D712 /* Tests-Prefix.pch */,
 			);
 			name = Tests;
 			path = Common/Tests;
@@ -420,14 +422,13 @@
 		4E68AF6118870691006D4543 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cyrillic Transliterator Input Method.app/Contents/MacOS/Cyrillic Transliterator Input Method";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Cyrillic Transliterator Input Method/Cyrillic Transliterator-Prefix.pch";
+				GCC_PREFIX_HEADER = "Common/Tests/Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -442,14 +443,13 @@
 		4E68AF6218870691006D4543 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cyrillic Transliterator Input Method.app/Contents/MacOS/Cyrillic Transliterator Input Method";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Cyrillic Transliterator Input Method/Cyrillic Transliterator-Prefix.pch";
+				GCC_PREFIX_HEADER = "Common/Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Common/Tests/Tests-Info.plist";
 				PRODUCT_NAME = "Cyrillic Transliterator Tests";
 				TEST_HOST = "$(BUNDLE_LOADER)";

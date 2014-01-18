@@ -21,10 +21,15 @@
 
 -(id) initWithLanguage:(NSString*)language
 {
+    return [self initWithPlistPath:[[NSBundle mainBundle] pathForResource:language ofType:@"plist"]];
+}
+
+-(id) initWithPlistPath:(NSString*)path
+{
     self = [super init];
     if (self)
     {
-        NSDictionary* plist = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:language ofType:@"plist"]];
+        NSDictionary* plist = [NSDictionary dictionaryWithContentsOfFile:path];
         NSMutableDictionary* languageTree = [NSMutableDictionary dictionary];
         
         for (NSString* keyCombo in plist)

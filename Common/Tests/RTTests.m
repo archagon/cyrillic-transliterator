@@ -28,7 +28,7 @@
 
 -(void) testBasicTransliteration
 {
-    RTTransliterator* transliterator = [[RTTransliterator alloc] initWithLanguage:@"RU"];
+    RTTransliterator* transliterator = [[RTTransliterator alloc] initWithPlistPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"RU" ofType:@"plist"]];
     
     NSArray* testStrings = @[@"s", @"sh", @"shh", @"shhh"];
     NSArray* translitStrings = @[@"с", @"ш", @"щ", [NSNull null]];
@@ -56,7 +56,7 @@
 
 -(void) testStressTest1
 {
-    RTTransliterator* transliterator = [[RTTransliterator alloc] initWithLanguage:@"ZZ"];
+    RTTransliterator* transliterator = [[RTTransliterator alloc] initWithPlistPath:[[NSBundle bundleForClass:[self class]] pathForResource:@"ZZ" ofType:@"plist"]];
     RTTranslitStream* stream = [[RTTranslitStream alloc] initWithTransliterator:transliterator];
     
     [stream addInput:@"a"];

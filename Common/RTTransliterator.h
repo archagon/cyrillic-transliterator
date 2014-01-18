@@ -12,6 +12,8 @@
 @property (nonatomic, readonly) NSUInteger longestKeyLength;
 
 -(id) initWithLanguage:(NSString*)language;
+-(id) initWithPlistPath:(NSString*)path;
+
 -(NSString*) currentValueForString:(NSString*)string;
 -(NSArray*) nextPossibleLettersForString:(NSString*)string;
 -(BOOL) hasNext:(NSString*)string;
