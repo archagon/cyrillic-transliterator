@@ -7,11 +7,10 @@
 //
 
 #import "RTTransliterator.h"
+#import "RTTranslitStream.h"
 
 @interface RMInputController : IMKInputController
 
-@property (nonatomic) RTTransliterator* transliterator;
-@property (nonatomic) NSMutableString* buffer;
-@property (nonatomic) NSString* processedBuffer;
+@property (nonatomic) RTTranslitStream* stream;
 
 @end
