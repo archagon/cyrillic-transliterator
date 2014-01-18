@@ -8,7 +8,14 @@
 
 #import "RTTransliterator.h"
 
-// TODO: currently uses makeshift NSDictionary tree; make into separate class to make maintenance easier
+// TODO: currently uses makeshift NSDictionary trie; make into separate class to make maintenance easier -- trie, radix?
+
+@interface RTTransliterator ()
+
+@property (nonatomic, readwrite) NSDictionary* languageTree;
+@property (nonatomic, readwrite) NSUInteger longestKeyLength;
+
+@end
 
 @implementation RTTransliterator
 
@@ -23,6 +30,7 @@
         for (NSString* keyCombo in plist)
         {
             [self addString:keyCombo withValue:plist[keyCombo] toTree:languageTree];
+            self.longestKeyLength = MAX(self.longestKeyLength, [keyCombo length]);
         }
         
         self.languageTree = languageTree;

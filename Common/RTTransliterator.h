@@ -8,7 +8,8 @@
 
 @interface RTTransliterator : NSObject
 
-@property (nonatomic) NSDictionary* languageTree;
+@property (nonatomic, readonly) NSDictionary* languageTree;
+@property (nonatomic, readonly) NSUInteger longestKeyLength;
 
 -(id) initWithLanguage:(NSString*)language;
 -(NSString*) currentValueForString:(NSString*)string;
