@@ -67,9 +67,11 @@
     
     [self.incompleteBuffer appendString:string];
     
-    NSUInteger startingIndexOfFirstIncompleteSubstring = 0;
+    BOOL foundIncompleteSubstring = NO;
+    NSInteger startingIndexOfFirstIncompleteSubstring = 0;
+    NSUInteger i = 0;
     
-    for (NSUInteger i = 0; i < [self.incompleteBuffer length]; i++)
+    while (i < [self.incompleteBuffer length])
     {
         // Test the substring starting at the index 'i'. While there are still possible matches with more added characters,
         // keep adding to it, character by character. Stop either when we reach the end of the buffer (at which point
@@ -89,7 +91,7 @@
         while (true)
         {
             // this will definitely get hit at some point; ergo, we won't get stuck in an infinite loop
-            if (i + lengthOfCurrentSubstring <= [self.incompleteBuffer length])
+            if (i + lengthOfCurrentSubstring > [self.incompleteBuffer length])
             {
                 hitEndOfBuffer = YES;
                 break;
@@ -99,11 +101,6 @@
             NSString* value = [self.transliterator currentValueForString:substring];
             BOOL hasNext = [self.transliterator hasNext:substring];
             
-            if (!value && !hasNext)
-            {
-                break;
-            }
-            
             if (value)
             {
                 lengthOfLastSubstringWithValue = lengthOfCurrentSubstring;
@@ -111,26 +108,44 @@
                 lastValue = value;
             }
             
+            if (!hasNext)
+            {
+                break;
+            }
+            
             lengthOfCurrentSubstring++;
         }
         
-        i = (i + lengthOfLastSubstringWithValue);
-        
-        if (!hitEndOfBuffer)
+        if (!foundIncompleteSubstring)
         {
             startingIndexOfFirstIncompleteSubstring = i;
-            
+        }
+        
+        if (!hitEndOfBuffer && !foundIncompleteSubstring)
+        {
             [self.completeBuffer appendString:lastSubstringWithValue];
             [self.completeTransliteratedBuffer appendString:lastValue];
         }
         else
         {
+            foundIncompleteSubstring = YES;
+            
             // no need to add anything to incompleteBuffer, all the characters are already there
             [self.incompleteTransliteratedBuffer appendString:lastValue];
         }
+        
+        i = (i + lengthOfLastSubstringWithValue);
     }
 
-    [self.incompleteBuffer deleteCharactersInRange:NSMakeRange(0, startingIndexOfFirstIncompleteSubstring)];
+    if (foundIncompleteSubstring)
+    {
+        [self.incompleteBuffer deleteCharactersInRange:NSMakeRange(0, startingIndexOfFirstIncompleteSubstring)];
+    }
+    else
+    {
+        [self.incompleteBuffer deleteCharactersInRange:NSMakeRange(0, [self.incompleteBuffer length])];
+    }
 }
 
 @end
+    
