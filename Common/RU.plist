@@ -34,9 +34,17 @@
 	<string>ё</string>
 	<key>Jo</key>
 	<string>Ё</string>
+	<key>JO</key>
+	<string>Ё</string>
+	<key>YO</key>
+	<string>Ё</string>
+	<key>Ö</key>
+	<string>Ё</string>
 	<key>zh</key>
 	<string>ж</string>
 	<key>Zh</key>
+	<string>Ж</string>
+	<key>ZH</key>
 	<string>Ж</string>
 	<key>z</key>
 	<string>з</string>
@@ -108,15 +116,25 @@
 	<string>ч</string>
 	<key>Ch</key>
 	<string>Ч</string>
+	<key>CH</key>
+	<string>Ч</string>
 	<key>sh</key>
 	<string>ш</string>
 	<key>Sh</key>
+	<string>Ш</string>
+	<key>SH</key>
 	<string>Ш</string>
 	<key>shh</key>
 	<string>щ</string>
 	<key>w</key>
 	<string>щ</string>
 	<key>Shh</key>
+	<string>Щ</string>
+	<key>SHh</key>
+	<string>Щ</string>
+	<key>SHH</key>
+	<string>Щ</string>
+	<key>W</key>
 	<string>Щ</string>
 	<key>#</key>
 	<string>ъ</string>
@@ -136,6 +154,10 @@
 	<string>э</string>
 	<key>Je</key>
 	<string>Э</string>
+	<key>JE</key>
+	<string>Э</string>
+	<key>Ä</key>
+	<string>Э</string>
 	<key>ju</key>
 	<string>ю</string>
 	<key>yu</key>
@@ -144,6 +166,14 @@
 	<string>ю</string>
 	<key>Ju</key>
 	<string>Ю</string>
+	<key>JU</key>
+	<string>Ю</string>
+	<key>Yu</key>
+	<string>Ю</string>
+	<key>YU</key>
+	<string>Ю</string>
+	<key>Ü</key>
+	<string>Ю</string>
 	<key>ja</key>
 	<string>я</string>
 	<key>ya</key>
@@ -151,6 +181,14 @@
 	<key>q</key>
 	<string>я</string>
 	<key>Ja</key>
+	<string>Я</string>
+	<key>JA</key>
+	<string>Я</string>
+	<key>Ya</key>
+	<string>Я</string>
+	<key>YA</key>
+	<string>Я</string>
+	<key>Q</key>
 	<string>Я</string>
 	<key>azz</key>
 	<string>1</string>
