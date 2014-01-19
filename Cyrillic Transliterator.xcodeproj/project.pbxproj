@@ -33,6 +33,9 @@
 		4EA1232A188BC9BB00A89CD7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5DA51A188B79C7000073E5 /* XCTest.framework */; };
 		4EA1232D188BCDB900A89CD7 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1232B188BCDB900A89CD7 /* Preferences.xib */; };
 		4EA12330188BD25A00A89CD7 /* RBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA1232F188BD25A00A89CD7 /* RBPreferencesController.m */; };
+		4EA12372188C8F7800A89CD7 /* RU.translit in Resources */ = {isa = PBXBuildFile; fileRef = 4EA12371188C8F7800A89CD7 /* RU.translit */; };
+		4EA12373188C8F7800A89CD7 /* RU.translit in Resources */ = {isa = PBXBuildFile; fileRef = 4EA12371188C8F7800A89CD7 /* RU.translit */; };
+		4EA12374188C8F7800A89CD7 /* RU.translit in Resources */ = {isa = PBXBuildFile; fileRef = 4EA12371188C8F7800A89CD7 /* RU.translit */; };
 		4EBFBD5E1889EE0F0032D712 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD5C1889EE0F0032D712 /* InfoPlist.strings */; };
 		4EBFBD5F1889EE160032D712 /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
 		4EBFBD621889EE320032D712 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD601889EE320032D712 /* icon.tiff */; };
@@ -87,6 +90,7 @@
 		4EA1232C188BCDB900A89CD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "RapidTranslit Monitor/Base.lproj/Preferences.xib"; sourceTree = SOURCE_ROOT; };
 		4EA1232E188BD25A00A89CD7 /* RBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPreferencesController.h; sourceTree = "<group>"; };
 		4EA1232F188BD25A00A89CD7 /* RBPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPreferencesController.m; sourceTree = "<group>"; };
+		4EA12371188C8F7800A89CD7 /* RU.translit */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = RU.translit; sourceTree = "<group>"; };
 		4EB01F1D188BADE20031FE09 /* UIElementUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementUtilities.h; sourceTree = "<group>"; };
 		4EB01F1E188BADE20031FE09 /* UIElementUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElementUtilities.m; sourceTree = "<group>"; };
 		4EBFBD5D1889EE0F0032D712 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = "Cyrillic Transliterator Input Method/English.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
@@ -151,6 +155,7 @@
 				4E03E4721889E80C0013490B /* RTTransliterator.m */,
 				4E03E4731889E80C0013490B /* RTTranslitStream.h */,
 				4E03E4741889E80C0013490B /* RTTranslitStream.m */,
+				4EA12371188C8F7800A89CD7 /* RU.translit */,
 				4E03E48D1889EDE40013490B /* RU.plist */,
 			);
 			path = Common;
@@ -374,6 +379,7 @@
 				4EA1232D188BCDB900A89CD7 /* Preferences.xib in Resources */,
 				4E5DA50C188B79C7000073E5 /* Credits.rtf in Resources */,
 				4E5DA512188B79C7000073E5 /* Menu.xib in Resources */,
+				4EA12373188C8F7800A89CD7 /* RU.translit in Resources */,
 				4E5DA53B188B8BC7000073E5 /* RU.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +390,7 @@
 			files = (
 				4EBFBD5E1889EE0F0032D712 /* InfoPlist.strings in Resources */,
 				4E03E48E1889EDE40013490B /* RU.plist in Resources */,
+				4EA12372188C8F7800A89CD7 /* RU.translit in Resources */,
 				4EBFBD631889EE320032D712 /* icon@2x.tiff in Resources */,
 				4EBFBD621889EE320032D712 /* icon.tiff in Resources */,
 			);
@@ -395,6 +402,7 @@
 			files = (
 				4EBFBD65188B2E000032D712 /* ZZ.plist in Resources */,
 				4EBFBD5F1889EE160032D712 /* RU.plist in Resources */,
+				4EA12374188C8F7800A89CD7 /* RU.translit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

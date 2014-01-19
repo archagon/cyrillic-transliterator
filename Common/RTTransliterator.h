@@ -13,6 +13,8 @@
 
 -(id) initWithLanguage:(NSString*)language;
 -(id) initWithPlistPath:(NSString*)path;
+-(id) initWithJsonPath:(NSString*)path;
+-(id) initWithDictionary:(NSDictionary*)dictionary; // designated initializer
 
 -(NSString*) currentValueForString:(NSString*)string;
 -(NSArray*) nextPossibleLettersForString:(NSString*)string;

@@ -21,20 +21,46 @@
 
 -(id) initWithLanguage:(NSString*)language
 {
-    return [self initWithPlistPath:[[NSBundle mainBundle] pathForResource:language ofType:@"plist"]];
+    NSString* pathForJson = [[NSBundle mainBundle] pathForResource:language ofType:@"translit"];
+    
+    if (pathForJson)
+    {
+        return [self initWithJsonPath:pathForJson];
+    }
+    else
+    {
+        NSString* pathForPlist = [[NSBundle mainBundle] pathForResource:language ofType:@"plist"];
+        return [self initWithPlistPath:pathForPlist];
+    }
 }
 
 -(id) initWithPlistPath:(NSString*)path
 {
+    NSDictionary* plist = [NSDictionary dictionaryWithContentsOfFile:path];
+    return [self initWithDictionary:plist];
+}
+
+-(id) initWithJsonPath:(NSString*)path
+{
+    NSData* jsonData = [NSData dataWithContentsOfFile:path];
+    
+    NSError* error = nil;
+    id object = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    return [self initWithDictionary:object];
+    
+    // TODO: check error, check if object is actually dict
+}
+
+-(id) initWithDictionary:(NSDictionary*)dictionary
+{
     self = [super init];
     if (self)
     {
-        NSDictionary* plist = [NSDictionary dictionaryWithContentsOfFile:path];
         NSMutableDictionary* languageTree = [NSMutableDictionary dictionary];
         
-        for (NSString* keyCombo in plist)
+        for (NSString* keyCombo in dictionary)
         {
-            [self addString:keyCombo withValue:plist[keyCombo] toTree:languageTree];
+            [self addString:keyCombo withValue:dictionary[keyCombo] toTree:languageTree];
             self.longestKeyLength = MAX(self.longestKeyLength, [keyCombo length]);
         }
         
