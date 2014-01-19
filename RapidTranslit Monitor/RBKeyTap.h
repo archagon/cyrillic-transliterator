@@ -11,6 +11,7 @@
 @interface RBKeyTap : NSObject
 
 @property RTTranslitStream* stream;
+@property CFMachPortRef eventTap;
 
 -(void) start;
 -(void) stop;

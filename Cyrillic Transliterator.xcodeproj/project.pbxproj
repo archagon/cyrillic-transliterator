@@ -32,6 +32,8 @@
 		4E68AF3018870691006D4543 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68AF2F18870691006D4543 /* Cocoa.framework */; };
 		4E68AF5018870691006D4543 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68AF2F18870691006D4543 /* Cocoa.framework */; };
 		4E68AF64188707C2006D4543 /* InputMethodKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68AF63188707C2006D4543 /* InputMethodKit.framework */; };
+		4EA1232A188BC9BB00A89CD7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5DA51A188B79C7000073E5 /* XCTest.framework */; };
+		4EA1232D188BCDB900A89CD7 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1232B188BCDB900A89CD7 /* Preferences.xib */; };
 		4EBFBD5E1889EE0F0032D712 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD5C1889EE0F0032D712 /* InfoPlist.strings */; };
 		4EBFBD5F1889EE160032D712 /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
 		4EBFBD621889EE320032D712 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD601889EE320032D712 /* icon.tiff */; };
@@ -65,9 +67,6 @@
 		4E03E4891889EDD30013490B /* Cyrillic Transliterator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Cyrillic Transliterator-Info.plist"; path = "Cyrillic Transliterator Input Method/Resources/Cyrillic Transliterator-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4E03E48D1889EDE40013490B /* RU.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RU.plist; path = Common/RU.plist; sourceTree = SOURCE_ROOT; };
 		4E5DA4FB188B79C7000073E5 /* RapidTranslit Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RapidTranslit Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E5DA4FE188B79C7000073E5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		4E5DA4FF188B79C7000073E5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		4E5DA500188B79C7000073E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4E5DA505188B79C7000073E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E5DA507188B79C7000073E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E5DA509188B79C7000073E5 /* RapidTranslit Monitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RapidTranslit Monitor-Prefix.pch"; sourceTree = "<group>"; };
@@ -85,10 +84,10 @@
 		4E68AF2C18870691006D4543 /* Cyrillic Transliterator Input Method.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cyrillic Transliterator Input Method.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E68AF2F18870691006D4543 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4E68AF3218870691006D4543 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		4E68AF3318870691006D4543 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4E68AF3418870691006D4543 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4E68AF4D18870691006D4543 /* Cyrillic Transliterator Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cyrillic Transliterator Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E68AF63188707C2006D4543 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = System/Library/Frameworks/InputMethodKit.framework; sourceTree = SDKROOT; };
+		4EA1232C188BCDB900A89CD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "RapidTranslit Monitor/Base.lproj/Preferences.xib"; sourceTree = SOURCE_ROOT; };
 		4EB01F1D188BADE20031FE09 /* UIElementUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementUtilities.h; sourceTree = "<group>"; };
 		4EB01F1E188BADE20031FE09 /* UIElementUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElementUtilities.m; sourceTree = "<group>"; };
 		4EBFBD5D1889EE0F0032D712 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = "Cyrillic Transliterator Input Method/English.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
@@ -121,6 +120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E68AF5018870691006D4543 /* Cocoa.framework in Frameworks */,
+				4EA1232A188BC9BB00A89CD7 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,16 +178,6 @@
 			name = Secondary;
 			sourceTree = "<group>";
 		};
-		4E5DA4FD188B79C7000073E5 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4E5DA4FE188B79C7000073E5 /* AppKit.framework */,
-				4E5DA4FF188B79C7000073E5 /* CoreData.framework */,
-				4E5DA500188B79C7000073E5 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
 		4E5DA501188B79C7000073E5 /* RapidTranslit Monitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				4E5DA510188B79C7000073E5 /* Menu.xib */,
+				4EA1232B188BCDB900A89CD7 /* Preferences.xib */,
 				4E5DA504188B79C7000073E5 /* InfoPlist.strings */,
 				4E5DA50A188B79C7000073E5 /* Credits.rtf */,
 				4E5DA531188B7A47000073E5 /* RapidTranslit Monitor-Info.plist */,
@@ -262,10 +253,8 @@
 				4E68AF63188707C2006D4543 /* InputMethodKit.framework */,
 				4E68AF2F18870691006D4543 /* Cocoa.framework */,
 				4E68AF3218870691006D4543 /* AppKit.framework */,
-				4E68AF3318870691006D4543 /* CoreData.framework */,
 				4E68AF3418870691006D4543 /* Foundation.framework */,
 				4E5DA51A188B79C7000073E5 /* XCTest.framework */,
-				4E5DA4FD188B79C7000073E5 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -383,6 +372,7 @@
 			files = (
 				4E5DA506188B79C7000073E5 /* InfoPlist.strings in Resources */,
 				4E5DA514188B79C7000073E5 /* Images.xcassets in Resources */,
+				4EA1232D188BCDB900A89CD7 /* Preferences.xib in Resources */,
 				4E5DA50C188B79C7000073E5 /* Credits.rtf in Resources */,
 				4E5DA512188B79C7000073E5 /* Menu.xib in Resources */,
 				4E5DA533188B7A47000073E5 /* icon@2x.tiff in Resources */,
@@ -484,6 +474,14 @@
 			);
 			name = Menu.xib;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		4EA1232B188BCDB900A89CD7 /* Preferences.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4EA1232C188BCDB900A89CD7 /* Base */,
+			);
+			name = Preferences.xib;
 			sourceTree = "<group>";
 		};
 		4EBFBD5C1889EE0F0032D712 /* InfoPlist.strings */ = {

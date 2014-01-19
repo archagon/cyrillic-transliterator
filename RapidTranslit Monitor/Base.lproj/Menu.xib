@@ -19,14 +19,25 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="TgI-MT-unP">
             <items>
-                <menuItem title="Item 1" id="fDc-um-Y7g">
+                <menuItem title="Enable" id="fDc-um-Y7g">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="enableTapped:" target="494" id="f8o-BK-Li9"/>
+                    </connections>
                 </menuItem>
-                <menuItem title="Item 2" id="QXe-Tt-3Ux">
+                <menuItem isSeparatorItem="YES" id="8XW-rV-lhg"/>
+                <menuItem title="Preferences" id="3AT-sA-Ce3">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="preferencesTapped:" target="494" id="7wr-XX-dsR"/>
+                    </connections>
                 </menuItem>
-                <menuItem title="Item 3" id="Cpl-qK-wHx">
+                <menuItem isSeparatorItem="YES" id="e0a-sa-yWp"/>
+                <menuItem title="Quit" id="XOQ-y4-Xh9">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="exitTapped:" target="494" id="7t7-Fg-qza"/>
+                    </connections>
                 </menuItem>
             </items>
         </menu>

@@ -10,6 +10,10 @@
 
 @interface RBAppDelegate : NSObject <NSApplicationDelegate>
 
+-(IBAction) enableTapped:(NSMenuItem*)sender;
+-(IBAction) preferencesTapped:(NSMenuItem*)sender;
+-(IBAction) exitTapped:(NSMenuItem*)sender;
+
 @property (assign) IBOutlet NSMenu* menu;
 @property NSStatusItem* statusItem;
 @property RBKeyTap* keyTap;

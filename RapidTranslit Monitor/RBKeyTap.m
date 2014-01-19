@@ -26,6 +26,12 @@
 
 -(void) start
 {
+    if (self.eventTap)
+    {
+        CGEventTapEnable(self.eventTap, true);
+        return;
+    }
+    
     NSDictionary* options = @{ (__bridge id)kAXTrustedCheckOptionPrompt: @YES };
     BOOL accessibilityEnabled = AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)options);
     
@@ -34,29 +40,30 @@
                             CGEventMaskBit(kCGEventKeyUp)   |
                             CGEventMaskBit(kCGEventFlagsChanged);
     
-    CFMachPortRef eventTap = CGEventTapCreate(kCGSessionEventTap,
-                                                 kCGHeadInsertEventTap,
-                                                 0,
-                                                 eventMask,
-                                                 RBKeyTapCallback,
-                                                 (__bridge void *)(self.stream));
+    self.eventTap = CGEventTapCreate(kCGSessionEventTap,
+                                     kCGHeadInsertEventTap,
+                                     0,
+                                     eventMask,
+                                     RBKeyTapCallback,
+                                     (__bridge void *)(self.stream));
     
-    if (!eventTap)
+    if (!self.eventTap)
     {
         NSLog(@"Failed to create event tap!");
     }
     
-    CFRunLoopSourceRef runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0);
+    CFRunLoopSourceRef runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, self.eventTap, 0);
     
     CFRunLoopAddSource(CFRunLoopGetCurrent(),
                        runLoopSource,
                        kCFRunLoopCommonModes);
     
-    CGEventTapEnable(eventTap, true);
+    CGEventTapEnable(self.eventTap, true);
 }
 
 -(void) stop
 {
+    CGEventTapEnable(self.eventTap, false);
 }
 
 //-(void) accessibilityTest
