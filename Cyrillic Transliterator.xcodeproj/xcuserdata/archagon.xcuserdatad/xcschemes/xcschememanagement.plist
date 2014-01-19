@@ -7,11 +7,26 @@
 		<key>Cyrillic Transliterator Input Method.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>RapidTranslit Monitor.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4E5DA4FA188B79C7000073E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4E5DA518188B79C7000073E5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4E68AF2B18870691006D4543</key>
 		<dict>
 			<key>primary</key>
