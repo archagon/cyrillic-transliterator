@@ -23,8 +23,6 @@
 		4E5DA50F188B79C7000073E5 /* RBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA50E188B79C7000073E5 /* RBAppDelegate.m */; };
 		4E5DA512188B79C7000073E5 /* Menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5DA510188B79C7000073E5 /* Menu.xib */; };
 		4E5DA514188B79C7000073E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5DA513188B79C7000073E5 /* Images.xcassets */; };
-		4E5DA532188B7A47000073E5 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4E5DA52E188B7A47000073E5 /* icon.tiff */; };
-		4E5DA533188B7A47000073E5 /* icon@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4E5DA52F188B7A47000073E5 /* icon@2x.tiff */; };
 		4E5DA538188B89E4000073E5 /* RBKeyTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA537188B89E4000073E5 /* RBKeyTap.m */; };
 		4E5DA539188B8BC4000073E5 /* RTTransliterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4721889E80C0013490B /* RTTransliterator.m */; };
 		4E5DA53A188B8BC4000073E5 /* RTTranslitStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4741889E80C0013490B /* RTTranslitStream.m */; };
@@ -77,8 +75,6 @@
 		4E5DA511188B79C7000073E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Menu.xib; sourceTree = "<group>"; };
 		4E5DA513188B79C7000073E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		4E5DA51A188B79C7000073E5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		4E5DA52E188B7A47000073E5 /* icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = icon.tiff; sourceTree = "<group>"; };
-		4E5DA52F188B7A47000073E5 /* icon@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "icon@2x.tiff"; sourceTree = "<group>"; };
 		4E5DA531188B7A47000073E5 /* RapidTranslit Monitor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RapidTranslit Monitor-Info.plist"; sourceTree = "<group>"; };
 		4E5DA536188B89E4000073E5 /* RBKeyTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBKeyTap.h; sourceTree = "<group>"; };
 		4E5DA537188B89E4000073E5 /* RBKeyTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBKeyTap.m; sourceTree = "<group>"; };
@@ -202,8 +198,6 @@
 		4E5DA52D188B7A47000073E5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				4E5DA52E188B7A47000073E5 /* icon.tiff */,
-				4E5DA52F188B7A47000073E5 /* icon@2x.tiff */,
 				4E5DA513188B79C7000073E5 /* Images.xcassets */,
 			);
 			path = Assets;
@@ -380,8 +374,6 @@
 				4EA1232D188BCDB900A89CD7 /* Preferences.xib in Resources */,
 				4E5DA50C188B79C7000073E5 /* Credits.rtf in Resources */,
 				4E5DA512188B79C7000073E5 /* Menu.xib in Resources */,
-				4E5DA533188B7A47000073E5 /* icon@2x.tiff in Resources */,
-				4E5DA532188B7A47000073E5 /* icon.tiff in Resources */,
 				4E5DA53B188B8BC7000073E5 /* RU.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,7 @@
 -(void) applicationDidFinishLaunching:(NSNotification*)aNotification
 {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-    [self.statusItem setImage:[NSImage imageNamed:@"icon.tiff"]];
+    [self.statusItem setImage:[NSImage imageNamed:@"icon"]];
     [self.statusItem setHighlightMode:YES];
     [self.statusItem setMenu:self.menu];
     
