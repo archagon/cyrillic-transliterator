@@ -14,6 +14,7 @@
 {
     self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
     [self.statusItem setImage:[NSImage imageNamed:@"icon"]];
+    [self.statusItem setAlternateImage:[NSImage imageNamed:@"icon-inverse"]];
     [self.statusItem setHighlightMode:YES];
     [self.statusItem setMenu:self.menu];
     
