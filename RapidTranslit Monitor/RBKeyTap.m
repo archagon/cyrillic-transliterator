@@ -34,6 +34,7 @@ RTTranslitStream* streamRef;
     NSDictionary* options = @{ (__bridge id)kAXTrustedCheckOptionPrompt: @YES };
     BOOL accessibilityEnabled = AXIsProcessTrustedWithOptions((__bridge CFDictionaryRef)options);
     
+    // TODO: mouse events
     CGEventMask eventMask = CGEventMaskBit(kCGEventKeyDown) |
                             CGEventMaskBit(kCGEventKeyUp)   |
                             CGEventMaskBit(kCGEventFlagsChanged);
@@ -90,8 +91,18 @@ CGEventRef RBKeyTapCallback(CGEventTapProxy aProxy, CGEventType aType, CGEventRe
         return aEvent;
     }
     
-    UniCharCount count;
+    CGEventFlags flags = CGEventGetFlags(aEvent);
+    if (flags & kCGEventFlagMaskControl     ||
+        flags & kCGEventFlagMaskAlternate   ||
+        flags & kCGEventFlagMaskCommand     ||
+        flags & kCGEventFlagMaskSecondaryFn ||
+        flags & kCGEventFlagMaskHelp)
+    {
+        RBCommit(YES, aEvent, aProxy);
+        return aEvent;
+    }
     
+    UniCharCount count;
     CGEventKeyboardGetUnicodeString(aEvent, 10, &count, currentInputString);
     NSString* convertedString = [NSString stringWithCharacters:currentInputString length:count];
     
@@ -112,12 +123,9 @@ CGEventRef RBKeyTapCallback(CGEventTapProxy aProxy, CGEventType aType, CGEventRe
         if (incompleteBuffer)
         {
             RBPrintText([streamRef incompleteTransliteratedBuffer], aEvent, aProxy);
-//            [sender setMarkedText:[self.stream incompleteTransliteratedBuffer] selectionRange:NSMakeRange(0, [incompleteBuffer length]) replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
         }
         
-        UniChar string[1];
-        string[0] = '\0';
-        CGEventKeyboardSetUnicodeString(aEvent, 1, string);
+        CGEventSetType(aEvent, kCGEventNull);
     }
     
     return aEvent;
@@ -166,8 +174,6 @@ void RBDeleteText(NSUInteger numCharacters, CGEventRef event, CGEventTapProxy pr
         return;
     }
     
-    numCharacters++;
-    
     // kVK_Delete == 0x33, "independent of keyboard layout"
     CGEventRef keyEventDown = CGEventCreateKeyboardEvent(CGEventCreateSourceFromEvent(event), 0x33, true);
     CGEventRef keyEventUp = CGEventCreateKeyboardEvent(CGEventCreateSourceFromEvent(event), 0x33, false);
@@ -177,6 +183,9 @@ void RBDeleteText(NSUInteger numCharacters, CGEventRef event, CGEventTapProxy pr
         CGEventTapPostEvent(proxy, keyEventDown);
         CGEventTapPostEvent(proxy, keyEventUp);
     }
+    
+    CFRelease(keyEventDown);
+    CFRelease(keyEventUp);
 }
 
 @end
