@@ -17,9 +17,7 @@
 		4E03E4881889EDBF0013490B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4871889EDBF0013490B /* main.m */; };
 		4E03E48E1889EDE40013490B /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
 		4E5DA4FC188B79C7000073E5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68AF2F18870691006D4543 /* Cocoa.framework */; };
-		4E5DA506188B79C7000073E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E5DA504188B79C7000073E5 /* InfoPlist.strings */; };
 		4E5DA508188B79C7000073E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA507188B79C7000073E5 /* main.m */; };
-		4E5DA50C188B79C7000073E5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4E5DA50A188B79C7000073E5 /* Credits.rtf */; };
 		4E5DA50F188B79C7000073E5 /* RBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA50E188B79C7000073E5 /* RBAppDelegate.m */; };
 		4E5DA512188B79C7000073E5 /* Menu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5DA510188B79C7000073E5 /* Menu.xib */; };
 		4E5DA514188B79C7000073E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5DA513188B79C7000073E5 /* Images.xcassets */; };
@@ -69,10 +67,8 @@
 		4E03E4891889EDD30013490B /* Cyrillic Transliterator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Cyrillic Transliterator-Info.plist"; path = "Cyrillic Transliterator Input Method/Resources/Cyrillic Transliterator-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4E03E48D1889EDE40013490B /* RU.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RU.plist; path = Common/RU.plist; sourceTree = SOURCE_ROOT; };
 		4E5DA4FB188B79C7000073E5 /* RapidTranslit Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RapidTranslit Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E5DA505188B79C7000073E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E5DA507188B79C7000073E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E5DA509188B79C7000073E5 /* RapidTranslit Monitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RapidTranslit Monitor-Prefix.pch"; sourceTree = "<group>"; };
-		4E5DA50B188B79C7000073E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		4E5DA50D188B79C7000073E5 /* RBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBAppDelegate.h; sourceTree = "<group>"; };
 		4E5DA50E188B79C7000073E5 /* RBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBAppDelegate.m; sourceTree = "<group>"; };
 		4E5DA511188B79C7000073E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Menu.xib; sourceTree = "<group>"; };
@@ -213,8 +209,6 @@
 			children = (
 				4E5DA510188B79C7000073E5 /* Menu.xib */,
 				4EA1232B188BCDB900A89CD7 /* Preferences.xib */,
-				4E5DA504188B79C7000073E5 /* InfoPlist.strings */,
-				4E5DA50A188B79C7000073E5 /* Credits.rtf */,
 				4E5DA531188B7A47000073E5 /* RapidTranslit Monitor-Info.plist */,
 			);
 			path = Resources;
@@ -374,10 +368,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E5DA506188B79C7000073E5 /* InfoPlist.strings in Resources */,
 				4E5DA514188B79C7000073E5 /* Images.xcassets in Resources */,
 				4EA1232D188BCDB900A89CD7 /* Preferences.xib in Resources */,
-				4E5DA50C188B79C7000073E5 /* Credits.rtf in Resources */,
 				4E5DA512188B79C7000073E5 /* Menu.xib in Resources */,
 				4EA12373188C8F7800A89CD7 /* RU.translit in Resources */,
 				4E5DA53B188B8BC7000073E5 /* RU.plist in Resources */,
@@ -455,24 +447,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4E5DA504188B79C7000073E5 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E5DA505188B79C7000073E5 /* en */,
-			);
-			name = InfoPlist.strings;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		4E5DA50A188B79C7000073E5 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E5DA50B188B79C7000073E5 /* en */,
-			);
-			name = Credits.rtf;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		4E5DA510188B79C7000073E5 /* Menu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
