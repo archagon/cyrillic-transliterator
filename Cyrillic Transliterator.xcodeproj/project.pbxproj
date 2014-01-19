@@ -89,6 +89,8 @@
 		4E68AF3418870691006D4543 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4E68AF4D18870691006D4543 /* Cyrillic Transliterator Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cyrillic Transliterator Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E68AF63188707C2006D4543 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = System/Library/Frameworks/InputMethodKit.framework; sourceTree = SDKROOT; };
+		4EB01F1D188BADE20031FE09 /* UIElementUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementUtilities.h; sourceTree = "<group>"; };
+		4EB01F1E188BADE20031FE09 /* UIElementUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElementUtilities.m; sourceTree = "<group>"; };
 		4EBFBD5D1889EE0F0032D712 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = "Cyrillic Transliterator Input Method/English.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
 		4EBFBD601889EE320032D712 /* icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = icon.tiff; path = "Cyrillic Transliterator Input Method/Assets/icon.tiff"; sourceTree = SOURCE_ROOT; };
 		4EBFBD611889EE320032D712 /* icon@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon@2x.tiff"; path = "Cyrillic Transliterator Input Method/Assets/icon@2x.tiff"; sourceTree = SOURCE_ROOT; };
@@ -193,6 +195,8 @@
 				4E5DA50E188B79C7000073E5 /* RBAppDelegate.m */,
 				4E5DA536188B89E4000073E5 /* RBKeyTap.h */,
 				4E5DA537188B89E4000073E5 /* RBKeyTap.m */,
+				4EB01F1D188BADE20031FE09 /* UIElementUtilities.h */,
+				4EB01F1E188BADE20031FE09 /* UIElementUtilities.m */,
 				4E5DA535188B7A85000073E5 /* Secondary */,
 				4E5DA530188B7A47000073E5 /* Resources */,
 				4E5DA52D188B7A47000073E5 /* Assets */,
@@ -667,6 +671,7 @@
 				4E5DA529188B79C8000073E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E68AF2718870691006D4543 /* Build configuration list for PBXProject "Cyrillic Transliterator" */ = {
 			isa = XCConfigurationList;

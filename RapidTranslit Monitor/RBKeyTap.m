@@ -8,6 +8,9 @@
 
 #import "RBKeyTap.h"
 #import "RTTransliterator.h"
+#import "UIElementUtilities.h"
+
+// http://stackoverflow.com/questions/19798583/accessibility-api-alternative-to-get-selected-text-from-any-app-in-osx
 
 @implementation RBKeyTap
 
@@ -60,6 +63,24 @@ RTTranslitStream* streamRef;
 -(void) stop
 {
 }
+
+//-(void) accessibilityTest
+//{
+//    AXUIElementRef _systemWide = AXUIElementCreateSystemWide();
+//    
+//    // get the currently active application
+//    AXUIElementRef _app = (__bridge AXUIElementRef)[UIElementUtilities
+//                                                    valueOfAttribute:@"AXFocusedApplication"
+//                                                    ofUIElement:_systemWide];
+//    
+//    // Get the window that has focus for this application
+//    AXUIElementRef _window = (__bridge AXUIElementRef)[UIElementUtilities
+//                                                       valueOfAttribute:@"AXFocusedUIElement"
+//                                                       ofUIElement:_app];
+//    
+//    NSString *valueToSet = @"this is a test";
+//    AXUIElementSetAttributeValue(_window, kAXValueAttribute, (__bridge CFTypeRef)(valueToSet));
+//}
 
 // TODO: can we keep this inside the interface declaration?
 CGEventRef RBKeyTapCallback(CGEventTapProxy aProxy, CGEventType aType, CGEventRef aEvent, void* aRefcon)
