@@ -16,6 +16,9 @@
     [self.statusItem setImage:[NSImage imageNamed:@"icon.tiff"]];
     [self.statusItem setHighlightMode:YES];
     [self.statusItem setMenu:self.menu];
+    
+    self.keyTap = [[RBKeyTap alloc] init];
+    [self.keyTap start];
 }
 
 @end

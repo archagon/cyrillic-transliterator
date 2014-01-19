@@ -6,11 +6,12 @@
 //  Copyright (c) 2014 Alexei Baboulevitch. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "RBKeyTap.h"
 
 @interface RBAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSMenu* menu;
 @property NSStatusItem* statusItem;
+@property RBKeyTap* keyTap;
 
 @end
