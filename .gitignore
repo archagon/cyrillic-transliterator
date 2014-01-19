@@ -1,4 +1,5 @@
 # local additions
+*.xccheckout
 *.sublime-*
 *.bbproject*
 
