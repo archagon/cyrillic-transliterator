@@ -9,15 +9,15 @@
         <customObject id="-3" userLabel="Application"/>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" wantsToBeColor="NO" animationBehavior="default" id="1">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="584" height="233"/>
+            <windowPositionMask key="initialPositionMask" topStrut="YES"/>
+            <rect key="contentRect" x="629" y="767" width="584" height="260"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="2">
-                <rect key="frame" x="0.0" y="0.0" width="584" height="233"/>
+                <rect key="frame" x="0.0" y="0.0" width="584" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nvx-nP-Aa4">
-                        <rect key="frame" x="20" y="8" width="546" height="60"/>
+                        <rect key="frame" x="20" y="12" width="546" height="60"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="C23-MR-x7l">
                             <font key="font" metaFont="system"/>
@@ -26,15 +26,15 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <box autoresizesSubviews="NO" fixedFrame="YES" title="Box" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="cdW-4g-AE5">
-                        <rect key="frame" x="19" y="161" width="548" height="54"/>
+                    <box autoresizesSubviews="NO" fixedFrame="YES" title="Options" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="cdW-4g-AE5">
+                        <rect key="frame" x="19" y="182" width="548" height="62"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="546" height="52"/>
+                            <rect key="frame" x="1" y="1" width="546" height="46"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FQn-ad-dBi">
-                                    <rect key="frame" x="188" y="18" width="171" height="18"/>
+                                    <rect key="frame" x="188" y="16" width="171" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="check" title="Transliteration enabled." bezelStyle="regularSquare" imagePosition="left" alignment="center" state="on" inset="2" id="miS-Qm-vyp">
                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -46,24 +46,24 @@
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <box autoresizesSubviews="NO" fixedFrame="YES" title="Box" borderType="line" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="2Cb-Kh-uER">
-                        <rect key="frame" x="19" y="78" width="548" height="81"/>
+                    <box autoresizesSubviews="NO" fixedFrame="YES" title="Dictionaries" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="2Cb-Kh-uER">
+                        <rect key="frame" x="19" y="84" width="548" height="90"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
-                            <rect key="frame" x="1" y="1" width="546" height="79"/>
+                            <rect key="frame" x="1" y="1" width="546" height="74"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WlT-xi-XOm">
-                                    <rect key="frame" x="16" y="48" width="130" height="17"/>
+                                    <rect key="frame" x="16" y="43" width="52" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Built-In Dictionaries" id="tmK-UD-roX">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Built-In" id="tmK-UD-roX">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6ua-wU-Gdc">
-                                    <rect key="frame" x="150" y="43" width="381" height="26"/>
+                                    <rect key="frame" x="72" y="38" width="459" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="1Ra-df-i5d" id="M8b-6z-7me">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -78,16 +78,16 @@
                                     </popUpButtonCell>
                                 </popUpButton>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jR9-AK-pO8">
-                                    <rect key="frame" x="15" y="21" width="131" height="17"/>
+                                    <rect key="frame" x="15" y="16" width="53" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Custom Dictionaries" id="Txg-BX-QNI">
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Custom" id="Txg-BX-QNI">
                                         <font key="font" metaFont="system"/>
                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                     </textFieldCell>
                                 </textField>
                                 <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AoV-t6-s0S">
-                                    <rect key="frame" x="150" y="16" width="288" height="26"/>
+                                    <rect key="frame" x="72" y="11" width="366" height="26"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="SII-0D-G6u" id="7sn-Df-8y5">
                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -102,7 +102,7 @@
                                     </popUpButtonCell>
                                 </popUpButton>
                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zf0-Zk-BlQ">
-                                    <rect key="frame" x="437" y="12" width="97" height="32"/>
+                                    <rect key="frame" x="437" y="7" width="97" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <buttonCell key="cell" type="push" title="Browse..." bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="w1B-cE-Cjg">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
