@@ -47,11 +47,9 @@
 
 -(BOOL) didCommandBySelector:(SEL)aSelector client:(id)sender
 {
-    NSLog(@"Translit command with selector: %@", NSStringFromSelector(aSelector));
-    
     [self commit:YES sender:sender];
-	
-	return NO;
+    
+    return NO;
 }
 
 -(void) commit:(BOOL)total sender:(id)sender

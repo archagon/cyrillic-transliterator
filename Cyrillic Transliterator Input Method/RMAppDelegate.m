@@ -13,14 +13,8 @@
 
 -(void) applicationDidFinishLaunching:(NSNotification*)aNotification
 {
-    self.connectionName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"InputMethodConnectionName"];
-    self.server = [[IMKServer alloc] initWithName:self.connectionName bundleIdentifier:[[NSBundle mainBundle] bundleIdentifier]];
-}
-
--(void) dealloc
-{
-    self.server = nil;
-    self.connectionName = nil;
+    NSString* connectionName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"InputMethodConnectionName"];
+    self.server = [[IMKServer alloc] initWithName:connectionName bundleIdentifier:[[NSBundle mainBundle] bundleIdentifier]];
 }
 
 @end

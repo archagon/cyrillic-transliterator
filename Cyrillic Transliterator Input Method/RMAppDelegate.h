@@ -8,7 +8,6 @@
 
 @interface RMAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (nonatomic, retain) NSString* connectionName;
-@property (nonatomic, retain) IMKServer* server;
+@property (nonatomic) IMKServer* server;
 
 @end
