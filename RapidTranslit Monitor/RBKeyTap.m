@@ -14,17 +14,12 @@
 
 @implementation RBKeyTap
 
-UniChar* currentInputString;
-RTTranslitStream* streamRef;
-
 -(id) init
 {
     self = [super init];
     if (self)
     {
         self.stream = [[RTTranslitStream alloc] initWithTransliterator:[[RTTransliterator alloc] initWithLanguage:@"RU"]];
-        streamRef = self.stream;
-        currentInputString = malloc(sizeof(UniChar) * 10);
     }
     return self;
 }
@@ -44,8 +39,7 @@ RTTranslitStream* streamRef;
                                                  0,
                                                  eventMask,
                                                  RBKeyTapCallback,
-//                                                 @[ currentInputString, self ]);
-                                                 NULL);
+                                                 (__bridge void *)(self.stream));
     
     if (!eventTap)
     {
@@ -84,24 +78,17 @@ RTTranslitStream* streamRef;
 //}
 
 // TODO: can we keep this inside the interface declaration?
-CGEventRef RBKeyTapCallback(CGEventTapProxy aProxy, CGEventType aType, CGEventRef aEvent, void* aRefcon)
+CGEventRef RBKeyTapCallback(CGEventTapProxy aProxy, CGEventType aType, CGEventRef aEvent, void* userId)
 {
     if (aType != kCGEventKeyDown)
     {
         return aEvent;
     }
     
-    CGEventFlags flags = CGEventGetFlags(aEvent);
-    if (flags & kCGEventFlagMaskControl     ||
-        flags & kCGEventFlagMaskAlternate   ||
-        flags & kCGEventFlagMaskCommand     ||
-        flags & kCGEventFlagMaskSecondaryFn ||
-        flags & kCGEventFlagMaskHelp)
-    {
-        RBCommit(YES, aEvent, aProxy);
-        return aEvent;
-    }
+    RTTranslitStream* streamRef = (__bridge RTTranslitStream*)userId;
     
+    // TODO: make static?
+    UniChar* currentInputString = malloc(sizeof(UniChar) * 10);
     UniCharCount count;
     CGEventKeyboardGetUnicodeString(aEvent, 10, &count, currentInputString);
     NSString* convertedString = [NSString stringWithCharacters:currentInputString length:count];
@@ -110,19 +97,31 @@ CGEventRef RBKeyTapCallback(CGEventTapProxy aProxy, CGEventType aType, CGEventRe
     NSUInteger lengthOfCurrentIncompleteTransliteratedString = [streamRef.incompleteTransliteratedBuffer length];
     
     // TODO: delete all text in every iteration; hacky
-    RBDeleteText(lengthOfCurrentCompleteTransliteratedString + lengthOfCurrentIncompleteTransliteratedString, aEvent, aProxy);
+    RBDeleteText(lengthOfCurrentCompleteTransliteratedString + lengthOfCurrentIncompleteTransliteratedString, aEvent, aProxy, streamRef);
+    
+    // TODO: breaks on CMD-A
+    CGEventFlags flags = CGEventGetFlags(aEvent);
+    if (flags & kCGEventFlagMaskControl     ||
+        flags & kCGEventFlagMaskAlternate   ||
+        flags & kCGEventFlagMaskCommand     ||
+        flags & kCGEventFlagMaskSecondaryFn ||
+        flags & kCGEventFlagMaskHelp)
+    {
+        RBCommit(YES, aEvent, aProxy, streamRef);
+        return aEvent;
+    }
     
     [streamRef addInput:convertedString];
     
     if ([[streamRef incompleteBuffer] length] != 0 || [[streamRef completeBuffer] length] != 0)
     {
-        RBCommit(NO, aEvent, aProxy);
+        RBCommit(NO, aEvent, aProxy, streamRef);
         
         NSString* incompleteBuffer = [streamRef incompleteBuffer];
         
         if (incompleteBuffer)
         {
-            RBPrintText([streamRef incompleteTransliteratedBuffer], aEvent, aProxy);
+            RBPrintText([streamRef incompleteTransliteratedBuffer], aEvent, aProxy, streamRef);
         }
         
         CGEventSetType(aEvent, kCGEventNull);
@@ -131,7 +130,7 @@ CGEventRef RBKeyTapCallback(CGEventTapProxy aProxy, CGEventType aType, CGEventRe
     return aEvent;
 }
 
-void RBCommit(BOOL total, CGEventRef event, CGEventTapProxy proxy)
+void RBCommit(BOOL total, CGEventRef event, CGEventTapProxy proxy, RTTranslitStream* streamRef)
 {
     if (!total)
     {
@@ -139,7 +138,7 @@ void RBCommit(BOOL total, CGEventRef event, CGEventTapProxy proxy)
         
         if (completeBuffer)
         {
-            RBPrintText([streamRef completeTransliteratedBuffer], event, proxy);
+            RBPrintText([streamRef completeTransliteratedBuffer], event, proxy, streamRef);
             [streamRef clearCompleteBuffer];
         }
     }
@@ -149,13 +148,13 @@ void RBCommit(BOOL total, CGEventRef event, CGEventTapProxy proxy)
         
         if (totalBuffer)
         {
-            RBPrintText([streamRef totalTransliteratedBuffer], event, proxy);
+            RBPrintText([streamRef totalTransliteratedBuffer], event, proxy, streamRef);
             [streamRef resetBuffer];
         }
     }
 }
 
-void RBPrintText(NSString* text, CGEventRef event, CGEventTapProxy proxy)
+void RBPrintText(NSString* text, CGEventRef event, CGEventTapProxy proxy, RTTranslitStream* streamRef)
 {
     UniChar string[1];
     
@@ -167,7 +166,7 @@ void RBPrintText(NSString* text, CGEventRef event, CGEventTapProxy proxy)
     }
 }
 
-void RBDeleteText(NSUInteger numCharacters, CGEventRef event, CGEventTapProxy proxy)
+void RBDeleteText(NSUInteger numCharacters, CGEventRef event, CGEventTapProxy proxy, RTTranslitStream* streamRef)
 {
     if (numCharacters == 0)
     {
