@@ -7,6 +7,7 @@
 //
 
 #import "RBKeyTap.h"
+#import "RBPreferencesController.h"
 
 @interface RBAppDelegate : NSObject <NSApplicationDelegate>
 
@@ -17,5 +18,6 @@
 @property (assign) IBOutlet NSMenu* menu;
 @property NSStatusItem* statusItem;
 @property RBKeyTap* keyTap;
+@property RBPreferencesController* preferences;
 
 @end

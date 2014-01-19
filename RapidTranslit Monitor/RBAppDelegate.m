@@ -73,6 +73,8 @@
 
 -(IBAction) preferencesTapped:(NSMenuItem*)sender
 {
+    self.preferences = [[RBPreferencesController alloc] initWithWindowNibName:@"Preferences"];
+    [self.preferences showWindow:nil];
 }
 
 -(IBAction) exitTapped:(NSMenuItem*)sender

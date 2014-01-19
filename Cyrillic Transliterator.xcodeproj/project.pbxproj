@@ -34,6 +34,7 @@
 		4E68AF64188707C2006D4543 /* InputMethodKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68AF63188707C2006D4543 /* InputMethodKit.framework */; };
 		4EA1232A188BC9BB00A89CD7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5DA51A188B79C7000073E5 /* XCTest.framework */; };
 		4EA1232D188BCDB900A89CD7 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA1232B188BCDB900A89CD7 /* Preferences.xib */; };
+		4EA12330188BD25A00A89CD7 /* RBPreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA1232F188BD25A00A89CD7 /* RBPreferencesController.m */; };
 		4EBFBD5E1889EE0F0032D712 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD5C1889EE0F0032D712 /* InfoPlist.strings */; };
 		4EBFBD5F1889EE160032D712 /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
 		4EBFBD621889EE320032D712 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD601889EE320032D712 /* icon.tiff */; };
@@ -88,6 +89,8 @@
 		4E68AF4D18870691006D4543 /* Cyrillic Transliterator Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cyrillic Transliterator Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E68AF63188707C2006D4543 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = System/Library/Frameworks/InputMethodKit.framework; sourceTree = SDKROOT; };
 		4EA1232C188BCDB900A89CD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "RapidTranslit Monitor/Base.lproj/Preferences.xib"; sourceTree = SOURCE_ROOT; };
+		4EA1232E188BD25A00A89CD7 /* RBPreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPreferencesController.h; sourceTree = "<group>"; };
+		4EA1232F188BD25A00A89CD7 /* RBPreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPreferencesController.m; sourceTree = "<group>"; };
 		4EB01F1D188BADE20031FE09 /* UIElementUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementUtilities.h; sourceTree = "<group>"; };
 		4EB01F1E188BADE20031FE09 /* UIElementUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElementUtilities.m; sourceTree = "<group>"; };
 		4EBFBD5D1889EE0F0032D712 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = "Cyrillic Transliterator Input Method/English.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
@@ -183,6 +186,8 @@
 			children = (
 				4E5DA50D188B79C7000073E5 /* RBAppDelegate.h */,
 				4E5DA50E188B79C7000073E5 /* RBAppDelegate.m */,
+				4EA1232E188BD25A00A89CD7 /* RBPreferencesController.h */,
+				4EA1232F188BD25A00A89CD7 /* RBPreferencesController.m */,
 				4E5DA536188B89E4000073E5 /* RBKeyTap.h */,
 				4E5DA537188B89E4000073E5 /* RBKeyTap.m */,
 				4EB01F1D188BADE20031FE09 /* UIElementUtilities.h */,
@@ -410,6 +415,7 @@
 			files = (
 				4E5DA538188B89E4000073E5 /* RBKeyTap.m in Sources */,
 				4E5DA53A188B8BC4000073E5 /* RTTranslitStream.m in Sources */,
+				4EA12330188BD25A00A89CD7 /* RBPreferencesController.m in Sources */,
 				4E5DA539188B8BC4000073E5 /* RTTransliterator.m in Sources */,
 				4E5DA50F188B79C7000073E5 /* RBAppDelegate.m in Sources */,
 				4E5DA508188B79C7000073E5 /* main.m in Sources */,
