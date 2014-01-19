@@ -28,7 +28,7 @@
     
     if ([[self.stream incompleteBuffer] length] != 0 || [[self.stream completeBuffer] length] != 0)
     {
-        [self commitComposition:sender];
+        [self commit:NO sender:sender];
         
         NSString* incompleteBuffer = [self.stream incompleteBuffer];
         
@@ -49,20 +49,38 @@
 {
     NSLog(@"Translit command with selector: %@", NSStringFromSelector(aSelector));
     
-    [self commitComposition:sender];
+    [self commit:YES sender:sender];
 	
 	return NO;
 }
 
+-(void) commit:(BOOL)total sender:(id)sender
+{
+    if (!total)
+    {
+        NSString* completeBuffer = [self.stream completeBuffer];
+        
+        if (completeBuffer)
+        {
+            [sender insertText:[self.stream completeTransliteratedBuffer] replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
+            [self.stream clearCompleteBuffer];
+        }
+    }
+    else
+    {
+        NSString* totalBuffer = [self.stream totalBuffer];
+        
+        if (totalBuffer)
+        {
+            [sender insertText:[self.stream totalTransliteratedBuffer] replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
+            [self.stream resetBuffer];
+        }
+    }
+}
+
 -(void) commitComposition:(id)sender
 {
-    NSString* completeBuffer = [self.stream completeBuffer];
-    
-    if (completeBuffer)
-    {
-        [sender insertText:[self.stream completeTransliteratedBuffer] replacementRange:NSMakeRange(NSNotFound, NSNotFound)];
-        [self.stream clearCompleteBuffer];
-    }
+    [self commit:YES sender:sender];
 }
 
 @end
