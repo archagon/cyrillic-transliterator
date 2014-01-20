@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Translit Service.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -33,6 +38,16 @@
 			<true/>
 		</dict>
 		<key>4E68AF4C18870691006D4543</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4EA12378188C96C200A89CD7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4EA12396188C96C300A89CD7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

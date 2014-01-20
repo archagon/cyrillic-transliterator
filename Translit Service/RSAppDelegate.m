@@ -18,6 +18,7 @@
 //    self.stream = [[RTTranslitStream alloc] initWithTransliterator:[[RTTransliterator alloc] initWithLanguage:@"RU"]];
 //
     RSService* service = [[RSService alloc] init];
+    NSLog(@"Created service translit: %@", service);
     [NSApp setServicesProvider:service];
 }
 

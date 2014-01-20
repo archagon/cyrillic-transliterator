@@ -16,7 +16,7 @@ So after a bit of research, I started working on a couple of solutions. The firs
 
 ## Techniques
 
-Transliteration can be done in one of three ways. (At the moment, only one is functional.)
+Transliteration can be done in one of four ways. (At the moment, only one is functional.)
 
 ### Input Method
 
@@ -29,6 +29,10 @@ This app runs in the menu bar and transliterates text based on Quartz event taps
 ### Sandboxed Text Box App (WIP)
 
 Intended for Mac App Store release, this app presents a simple text box that the user can type text into and then manually copy the transliteration from. The app can also transliterate pasted text.
+
+### Service (WIP)
+
+In addition to the real-time transliteration support provided by the apps above, you can also transliterate selected text via Services. This can be bound to a key command in OSX settings.
 
 ---
 
