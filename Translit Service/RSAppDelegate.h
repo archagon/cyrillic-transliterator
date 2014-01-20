@@ -10,6 +10,6 @@
 
 @interface RSAppDelegate : NSObject <NSApplicationDelegate>
 
-//@property RTTranslitStream* stream;
+@property RTTranslitStream* stream;
 
 @end

@@ -40,7 +40,6 @@
 		4EA123AF188C979900A89CD7 /* RTTransliterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4721889E80C0013490B /* RTTransliterator.m */; };
 		4EA123B0188C979900A89CD7 /* RTTranslitStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4741889E80C0013490B /* RTTranslitStream.m */; };
 		4EA123B1188C979900A89CD7 /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
-		4EA123B4188CA04300A89CD7 /* RSService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA123B3188CA04300A89CD7 /* RSService.m */; };
 		4EBFBD5E1889EE0F0032D712 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD5C1889EE0F0032D712 /* InfoPlist.strings */; };
 		4EBFBD5F1889EE160032D712 /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
 		4EBFBD621889EE320032D712 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD601889EE320032D712 /* icon.tiff */; };
@@ -104,8 +103,6 @@
 		4EA1238C188C96C300A89CD7 /* RSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAppDelegate.m; sourceTree = "<group>"; };
 		4EA12391188C96C300A89CD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EA123AB188C971B00A89CD7 /* Translit Service-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Translit Service-Info.plist"; sourceTree = "<group>"; };
-		4EA123B2188CA04300A89CD7 /* RSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSService.h; sourceTree = "<group>"; };
-		4EA123B3188CA04300A89CD7 /* RSService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSService.m; sourceTree = "<group>"; };
 		4EB01F1D188BADE20031FE09 /* UIElementUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementUtilities.h; sourceTree = "<group>"; };
 		4EB01F1E188BADE20031FE09 /* UIElementUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElementUtilities.m; sourceTree = "<group>"; };
 		4EBFBD5D1889EE0F0032D712 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = "Cyrillic Transliterator Input Method/English.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
@@ -317,8 +314,6 @@
 			children = (
 				4EA1238B188C96C300A89CD7 /* RSAppDelegate.h */,
 				4EA1238C188C96C300A89CD7 /* RSAppDelegate.m */,
-				4EA123B2188CA04300A89CD7 /* RSService.h */,
-				4EA123B3188CA04300A89CD7 /* RSService.m */,
 				4EA12391188C96C300A89CD7 /* Images.xcassets */,
 				4EA123AC188C976000A89CD7 /* Assets */,
 				4EA123AA188C971B00A89CD7 /* Resources */,
@@ -549,7 +544,6 @@
 				4EA12386188C96C300A89CD7 /* main.m in Sources */,
 				4EA1238D188C96C300A89CD7 /* RSAppDelegate.m in Sources */,
 				4EA123AF188C979900A89CD7 /* RTTransliterator.m in Sources */,
-				4EA123B4188CA04300A89CD7 /* RSService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
