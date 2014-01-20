@@ -16,13 +16,13 @@ So after a bit of research, I started working on a couple of solutions. The firs
 
 ## Techniques
 
-Transliteration can be done in one of four ways. (At the moment, only one is functional.)
+Transliteration can be done in one of five ways. (At the moment, three are functional.) My current preference is for the **keylayout file** method, along with the **Service** to deal with selected text.
 
 ### Input Method
 
 OSX has native [input method][2] support, typically for complicated character input like Chinese or Hebrew. The advantage of this method is that the transliterated keyboard shows up with all your other keyboards in your menu bar and behaves as expected with all text fields. To install, copy the input method app into your `~/Library/Input Methods` directory and select the "Cyrillic Transliterator" keyboard from the Russian section.
 
-### Menu Bar App (WIP)
+### Menu Bar App (WIP, but functional)
 
 This app runs in the menu bar and transliterates text based on Quartz event taps. Behavior is not as predictable as with the input method approach, since the app has no way of knowing if the user is typing into a text box. Accesibility has to be turned on for this app. Since dealing with input methods can be a little messy, this app is intended for users who would feel more safe with a stand-alone app.
 
@@ -30,7 +30,11 @@ This app runs in the menu bar and transliterates text based on Quartz event taps
 
 Intended for Mac App Store release, this app presents a simple text box that the user can type text into and then manually copy the transliteration from. The app can also transliterate pasted text.
 
-### Service (WIP)
+### Keylayout File Converter (WIP)
+
+I just discovered that you can have input-method-like transliteration support with simple Ukelele-generated keyfiles, like in this project [here][4] or [here][5]. They're hairy to make by hand, so this tool converts my .translit mapping files into .keylayout files.
+
+### Service
 
 In addition to the real-time transliteration support provided by the apps above, you can also transliterate selected text via Services. This can be bound to a key command in OSX settings.
 
@@ -41,3 +45,5 @@ The demo animation was created by using [LICEcap][3] to capture the OSX on-scree
 [1]: http://www.translit.ru
 [2]: http://en.wikipedia.org/wiki/Input_method
 [3]: http://www.cockos.com/licecap/
+[4]: https://github.com/bernardn/macos-transliteration
+[5]: http://github.com/aik099/custom.keylayout
