@@ -16,6 +16,8 @@
 		4E03E4851889EDA40013490B /* RMInputController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4831889EDA40013490B /* RMInputController.m */; };
 		4E03E4881889EDBF0013490B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4871889EDBF0013490B /* main.m */; };
 		4E03E48E1889EDE40013490B /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
+		4E39BB8A188CAF4800225DE3 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4E39BB88188CAF4800225DE3 /* icon.tiff */; };
+		4E39BB8B188CAF4800225DE3 /* icon@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4E39BB89188CAF4800225DE3 /* icon@2x.tiff */; };
 		4E5DA4FC188B79C7000073E5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68AF2F18870691006D4543 /* Cocoa.framework */; };
 		4E5DA508188B79C7000073E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA507188B79C7000073E5 /* main.m */; };
 		4E5DA50F188B79C7000073E5 /* RBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA50E188B79C7000073E5 /* RBAppDelegate.m */; };
@@ -35,15 +37,12 @@
 		4EA12386188C96C300A89CD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA12385188C96C300A89CD7 /* main.m */; };
 		4EA1238D188C96C300A89CD7 /* RSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA1238C188C96C300A89CD7 /* RSAppDelegate.m */; };
 		4EA12392188C96C300A89CD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA12391188C96C300A89CD7 /* Images.xcassets */; };
-		4EA123AD188C978300A89CD7 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD601889EE320032D712 /* icon.tiff */; };
-		4EA123AE188C978300A89CD7 /* icon@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD611889EE320032D712 /* icon@2x.tiff */; };
 		4EA123AF188C979900A89CD7 /* RTTransliterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4721889E80C0013490B /* RTTransliterator.m */; };
 		4EA123B0188C979900A89CD7 /* RTTranslitStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4741889E80C0013490B /* RTTranslitStream.m */; };
 		4EA123B1188C979900A89CD7 /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
+		4EA123B7188CADF700A89CD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA123B5188CADB900A89CD7 /* Images.xcassets */; };
 		4EBFBD5E1889EE0F0032D712 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD5C1889EE0F0032D712 /* InfoPlist.strings */; };
 		4EBFBD5F1889EE160032D712 /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
-		4EBFBD621889EE320032D712 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD601889EE320032D712 /* icon.tiff */; };
-		4EBFBD631889EE320032D712 /* icon@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD611889EE320032D712 /* icon@2x.tiff */; };
 		4EBFBD65188B2E000032D712 /* ZZ.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EBFBD64188B2E000032D712 /* ZZ.plist */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +71,8 @@
 		4E03E4871889EDBF0013490B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Cyrillic Transliterator Input Method/main.m"; sourceTree = SOURCE_ROOT; };
 		4E03E4891889EDD30013490B /* Cyrillic Transliterator-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Cyrillic Transliterator-Info.plist"; path = "Cyrillic Transliterator Input Method/Resources/Cyrillic Transliterator-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4E03E48D1889EDE40013490B /* RU.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RU.plist; path = Common/RU.plist; sourceTree = SOURCE_ROOT; };
+		4E39BB88188CAF4800225DE3 /* icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = icon.tiff; path = "Cyrillic Transliterator Input Method/Assets/icon.tiff"; sourceTree = SOURCE_ROOT; };
+		4E39BB89188CAF4800225DE3 /* icon@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon@2x.tiff"; path = "Cyrillic Transliterator Input Method/Assets/icon@2x.tiff"; sourceTree = SOURCE_ROOT; };
 		4E5DA4FB188B79C7000073E5 /* RapidTranslit Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RapidTranslit Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5DA507188B79C7000073E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E5DA509188B79C7000073E5 /* RapidTranslit Monitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RapidTranslit Monitor-Prefix.pch"; sourceTree = "<group>"; };
@@ -103,11 +104,10 @@
 		4EA1238C188C96C300A89CD7 /* RSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSAppDelegate.m; sourceTree = "<group>"; };
 		4EA12391188C96C300A89CD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EA123AB188C971B00A89CD7 /* Translit Service-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Translit Service-Info.plist"; sourceTree = "<group>"; };
+		4EA123B5188CADB900A89CD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Cyrillic Transliterator Input Method/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		4EB01F1D188BADE20031FE09 /* UIElementUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIElementUtilities.h; sourceTree = "<group>"; };
 		4EB01F1E188BADE20031FE09 /* UIElementUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIElementUtilities.m; sourceTree = "<group>"; };
 		4EBFBD5D1889EE0F0032D712 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = English; path = "Cyrillic Transliterator Input Method/English.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
-		4EBFBD601889EE320032D712 /* icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = icon.tiff; path = "Cyrillic Transliterator Input Method/Assets/icon.tiff"; sourceTree = SOURCE_ROOT; };
-		4EBFBD611889EE320032D712 /* icon@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon@2x.tiff"; path = "Cyrillic Transliterator Input Method/Assets/icon@2x.tiff"; sourceTree = SOURCE_ROOT; };
 		4EBFBD64188B2E000032D712 /* ZZ.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ZZ.plist; sourceTree = "<group>"; };
 		4EBFBD67188B33310032D712 /* Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,8 +153,9 @@
 		4E03E4621889E55C0013490B /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				4EBFBD601889EE320032D712 /* icon.tiff */,
-				4EBFBD611889EE320032D712 /* icon@2x.tiff */,
+				4E39BB88188CAF4800225DE3 /* icon.tiff */,
+				4E39BB89188CAF4800225DE3 /* icon@2x.tiff */,
+				4EA123B5188CADB900A89CD7 /* Images.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -471,10 +472,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA123B7188CADF700A89CD7 /* Images.xcassets in Resources */,
 				4EBFBD5E1889EE0F0032D712 /* InfoPlist.strings in Resources */,
 				4E03E48E1889EDE40013490B /* RU.plist in Resources */,
-				4EBFBD631889EE320032D712 /* icon@2x.tiff in Resources */,
-				4EBFBD621889EE320032D712 /* icon.tiff in Resources */,
+				4E39BB8B188CAF4800225DE3 /* icon@2x.tiff in Resources */,
+				4E39BB8A188CAF4800225DE3 /* icon.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,8 +495,6 @@
 			files = (
 				4EA12392188C96C300A89CD7 /* Images.xcassets in Resources */,
 				4EA123B1188C979900A89CD7 /* RU.plist in Resources */,
-				4EA123AE188C978300A89CD7 /* icon@2x.tiff in Resources */,
-				4EA123AD188C978300A89CD7 /* icon.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +826,7 @@
 				4EA123A6188C96C300A89CD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
