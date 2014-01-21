@@ -22,6 +22,7 @@
 		4E3C2516188E1B5500C66952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C2515188E1B5500C66952 /* main.m */; };
 		4E3C251A188E1B5500C66952 /* Translit_to_Keylayout_Converter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E3C2519188E1B5500C66952 /* Translit_to_Keylayout_Converter.1 */; };
 		4E3C2520188E1C0500C66952 /* RKConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C251F188E1C0500C66952 /* RKConverter.m */; };
+		4E3C254B188E7B2E00C66952 /* RTTransliterator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E4721889E80C0013490B /* RTTransliterator.m */; };
 		4E5DA4FC188B79C7000073E5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68AF2F18870691006D4543 /* Cocoa.framework */; };
 		4E5DA508188B79C7000073E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA507188B79C7000073E5 /* main.m */; };
 		4E5DA50F188B79C7000073E5 /* RBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA50E188B79C7000073E5 /* RBAppDelegate.m */; };
@@ -578,6 +579,7 @@
 			files = (
 				4E3C2516188E1B5500C66952 /* main.m in Sources */,
 				4E3C2520188E1C0500C66952 /* RKConverter.m in Sources */,
+				4E3C254B188E7B2E00C66952 /* RTTransliterator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

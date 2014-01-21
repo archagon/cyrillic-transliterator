@@ -6,9 +6,11 @@
 //  Copyright (c) 2014 Alexei Baboulevitch. All rights reserved.
 //
 
+#import "RTTransliterator.h"
+
 @interface RKConverter : NSObject
 
 -(BOOL) loadKeylayoutXML:(NSString*)keylayoutXMLContents;
--(NSString*) convertToKeylayout:(NSDictionary*)translitBindings;
+-(NSString*) convertToKeylayout:(RTTransliterator*)transliterator;
 
 @end
