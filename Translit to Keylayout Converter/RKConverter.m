@@ -151,17 +151,12 @@
     return YES;
 }
 
--(NSXMLElement*) actionForString:(NSString*)string
+-(NSXMLElement*) action:(NSString*)actionName
 {
-    NSString* actionName = [NSString stringWithFormat:@"action-%@", string];
     NSString* actionXPath = [NSString stringWithFormat:@"/keyboard/actions/action[@id='%@']", actionName];
     NSXMLElement* action = [self getNodeForXPath:actionXPath];
     
-    if (action)
-    {
-        return action;
-    }
-    else
+    if (!action)
     {
         NSString* actionsXPath = [NSString stringWithFormat:@"/keyboard/actions"];
         NSXMLElement* actions = [self getNodeForXPath:actionsXPath];
@@ -171,14 +166,51 @@
         [action addAttribute:outputAttribute];
         
         [actions addChild:action];
-        
-        return action;
     }
+    
+    NSError* error;
+    NSString* keyName = [actionName substringFromIndex:7]; // QQQ: kludge
+    NSString* keyXPath = [NSString stringWithFormat:@"/keyboard/keyMapSet/keyMap/key[@output='%@']", keyName];
+    NSArray* keys = [self.keylayoutXML nodesForXPath:keyXPath error:&error];
+    
+    for (NSXMLElement* key in keys)
+    {
+        NSXMLNode* actionAttribute = [NSXMLNode attributeWithName:@"action" stringValue:actionName];
+        [key removeAttributeForName:@"output"];
+        [key addAttribute:actionAttribute];
+    }
+    
+    return action;
 }
 
--(NSXMLElement*) stateForString:(NSString*)string
+-(NSXMLElement*) whenForAction:(NSString*)actionName state:(NSString*)stateName output:(NSString*)output next:(NSString*)next
 {
-    return nil;
+    NSString* whenXPath = [NSString stringWithFormat:@"/keyboard/actions/action[@id='%@']/when[@state='%@']", actionName, stateName];
+    NSXMLElement* when = [self getNodeForXPath:whenXPath];
+    
+    if (!when)
+    {
+        NSXMLElement* action = [self action:actionName];
+        
+        NSXMLElement* when = [NSXMLElement elementWithName:@"when"];
+        NSXMLNode* stateAttribute = [NSXMLNode attributeWithName:@"state" stringValue:stateName];
+        [when addAttribute:stateAttribute];
+        
+        if (output)
+        {
+            NSXMLNode* outputAttribute = [NSXMLNode attributeWithName:@"output" stringValue:output];
+            [when addAttribute:outputAttribute];
+        }
+        else if (next)
+        {
+            NSXMLNode* nextAttribute = [NSXMLNode attributeWithName:@"next" stringValue:next];
+            [when addAttribute:nextAttribute];
+        }
+        
+        [action addChild:when];
+    }
+    
+    return when;
 }
 
 -(BOOL) addTerminator:(NSString*)terminatorValue forState:(NSString*)state
@@ -200,8 +232,8 @@
         NSXMLElement* when = [NSXMLElement elementWithName:@"when"];
         NSXMLNode* stateAttribute = [NSXMLNode attributeWithName:@"state" stringValue:state];
         NSXMLNode* outputAttribute = [NSXMLNode attributeWithName:@"output" stringValue:terminatorValue];
-        [when addAttribute:outputAttribute];
         [when addAttribute:stateAttribute];
+        [when addAttribute:outputAttribute];
         
         [terminators addChild:when];
         
@@ -237,24 +269,49 @@
     return result;
 }
 
+
 -(BOOL) parseTransliterator:(RTTransliterator*)transliterator withString:(NSString*)string
 {
+    NSString* actionName = [NSString stringWithFormat:@"action-%@", [string substringFromIndex:[string length]-1]];
+    NSString* stateName = ([string length] <= 1 ? @"none" : [NSString stringWithFormat:@"state-%@", [string substringToIndex:[string length]-1]]);
+    NSString* fullStateName = [NSString stringWithFormat:@"state-%@", string];
+    
     NSString* value = [transliterator currentValueForString:string];
     NSArray* nextLetters = [transliterator nextPossibleLettersForString:string];
     
-    if ([string length] == 1)
-    {
-        [self actionForString:string];
-    }
+    [self action:actionName];
     
-    if (value && [nextLetters count] > 0)
+    if ([string length] > 1 || [nextLetters count] > 0)
     {
-        [self addTerminator:value forState:[NSString stringWithFormat:@"state-%@", string]];
+        [self action:actionName];
+        
+        if ([nextLetters count] > 0)
+        {
+            // set next state
+            [self whenForAction:actionName state:stateName output:nil next:fullStateName];
+            
+            if (value)
+            {
+                [self addTerminator:value forState:fullStateName];
+            }
+            
+            for (NSString* letter in nextLetters)
+            {
+                return [self parseTransliterator:transliterator withString:[string stringByAppendingString:letter]];
+            }
+        }
+        else
+        {
+            // set output
+            [self whenForAction:actionName state:stateName output:value next:nil];
+            return YES;
+        }
     }
-    
-    for (NSString* letter in nextLetters)
+    else
     {
-        [self parseTransliterator:transliterator withString:[string stringByAppendingString:letter]];
+        // set as normal, if not already action
+        [self whenForAction:actionName state:stateName output:value next:nil];
+        return YES;
     }
     
     return YES;

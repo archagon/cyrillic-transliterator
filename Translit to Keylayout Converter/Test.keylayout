@@ -45,24 +45,24 @@
     </modifierMap>
     <keyMapSet id='16c'>
         <keyMap index='0'>
-            <key code='0' output='a'/>
-            <key code='1' output='s'/>
-            <key code='2' output='d'/>
-            <key code='3' output='f'/>
-            <key code='4' output='h'/>
-            <key code='5' output='g'/>
-            <key code='6' output='z'/>
+            <key code='0' action='action-a'/>
+            <key code='1' action='action-s'/>
+            <key code='2' action='action-d'/>
+            <key code='3' action='action-f'/>
+            <key code='4' action='action-h'/>
+            <key code='5' action='action-g'/>
+            <key code='6' action='action-z'/>
             <key code='7' output='x'/>
             <key code='8' output='c'/>
-            <key code='9' output='v'/>
+            <key code='9' action='action-v'/>
             <key code='10' output='§'/>
-            <key code='11' output='b'/>
+            <key code='11' action='action-b'/>
             <key code='12' output='q'/>
             <key code='13' output='w'/>
-            <key code='14' output='e'/>
-            <key code='15' output='r'/>
-            <key code='16' output='y'/>
-            <key code='17' output='t'/>
+            <key code='14' action='action-e'/>
+            <key code='15' action='action-r'/>
+            <key code='16' action='action-y'/>
+            <key code='17' action='action-t'/>
             <key code='18' output='1'/>
             <key code='19' output='2'/>
             <key code='20' output='3'/>
@@ -76,22 +76,22 @@
             <key code='28' output='8'/>
             <key code='29' output='0'/>
             <key code='30' output=']'/>
-            <key code='31' output='o'/>
-            <key code='32' output='u'/>
+            <key code='31' action='action-o'/>
+            <key code='32' action='action-u'/>
             <key code='33' output='['/>
-            <key code='34' output='i'/>
-            <key code='35' output='p'/>
+            <key code='34' action='action-i'/>
+            <key code='35' action='action-p'/>
             <key code='36' output='&#x000D;'/>
-            <key code='37' output='l'/>
-            <key code='38' output='j'/>
+            <key code='37' action='action-l'/>
+            <key code='38' action='action-j'/>
             <key code='39' output='&#x0027;'/>
-            <key code='40' output='k'/>
+            <key code='40' action='action-k'/>
             <key code='41' output=';'/>
             <key code='42' output='\'/>
             <key code='43' output=','/>
             <key code='44' output='/'/>
-            <key code='45' output='n'/>
-            <key code='46' output='m'/>
+            <key code='45' action='action-n'/>
+            <key code='46' action='action-m'/>
             <key code='47' output='.'/>
             <key code='48' output='&#x0009;'/>
             <key code='49' output=' '/>
@@ -1022,11 +1022,83 @@
             <key code='104' output=' '/>
         </keyMap>
     </keyMapSet>
+    <actions>
+        <action id='action-p'>
+            <when state='none' output='п'/>
+        </action>
+        <action id='action-d'>
+            <when state='none' output='д'/>
+        </action>
+        <action id='action-r'>
+            <when state='none' output='р'/>
+        </action>
+        <action id='action-e'>
+            <when state='none' output='е'/>
+            <when state='state-j' output='э'/>
+        </action>
+        <action id='action-s'>
+            <when state='none' next='state-s'/>
+        </action>
+        <action id='action-h'>
+            <when state='state-s' next='state-sh'/>
+            <when state='state-sh' output='щ'/>
+            <when state='none' output='х'/>
+            <when state='state-z' output='ж'/>
+        </action>
+        <action id='action-f'>
+            <when state='none' output='ф'/>
+        </action>
+        <action id='action-t'>
+            <when state='none' output='т'/>
+        </action>
+        <action id='action-g'>
+            <when state='none' output='г'/>
+        </action>
+        <action id='action-u'>
+            <when state='none' output='у'/>
+            <when state='state-y' output='ю'/>
+        </action>
+        <action id='action-v'>
+            <when state='none' output='в'/>
+        </action>
+        <action id='action-i'>
+            <when state='none' output='и'/>
+        </action>
+        <action id='action-j'>
+            <when state='none' next='state-j'/>
+        </action>
+        <action id='action-k'>
+            <when state='none' output='к'/>
+        </action>
+        <action id='action-y'>
+            <when state='none' next='state-y'/>
+        </action>
+        <action id='action-l'>
+            <when state='none' output='л'/>
+        </action>
+        <action id='action-z'>
+            <when state='none' next='state-z'/>
+        </action>
+        <action id='action-m'>
+            <when state='none' output='м'/>
+        </action>
+        <action id='action-n'>
+            <when state='none' output='н'/>
+        </action>
+        <action id='action-a'>
+            <when state='none' output='а'/>
+        </action>
+        <action id='action-o'>
+            <when state='none' output='о'/>
+        </action>
+        <action id='action-b'>
+            <when state='none' output='б'/>
+        </action>
+    </actions>
     <terminators>
-        <when state='State 1' output='´'/>
-        <when state='State 2' output='`'/>
-        <when state='State 3' output='ˆ'/>
-        <when state='State 4' output='¨'/>
-        <when state='State 5' output='˜'/>
+        <when state='state-s' output='с'/>
+        <when state='state-sh' output='ш'/>
+        <when state='state-j' output='й'/>
+        <when state='state-z' output='з'/>
     </terminators>
 </keyboard>
