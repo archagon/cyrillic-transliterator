@@ -12,6 +12,7 @@
 // TODO: grab current keyboard layout, a la Ukelele: http://stackoverflow.com/questions/1918841/how-to-convert-ascii-character-to-cgkeycode
 // TODO: accomodate existing state changes
 // TODO: keyboards that output multiple characters per keystroke?
+// TODO: XML-safe character escaping
 
 @interface RKConverter ()
 
@@ -170,6 +171,10 @@
     
     NSError* error;
     NSString* keyName = [actionName substringFromIndex:7]; // QQQ: kludge
+    if ([keyName isEqualToString:@"(single-quote)"])
+    {
+        keyName = @"(KeyLayout Character: 0027)"; // QQQ: I don't usually program like this, I swear
+    }
     NSString* keyXPath = [NSString stringWithFormat:@"/keyboard/keyMapSet/keyMap/key[@output='%@']", keyName];
     NSArray* keys = [self.keylayoutXML nodesForXPath:keyXPath error:&error];
     
@@ -272,9 +277,20 @@
 
 -(BOOL) parseTransliterator:(RTTransliterator*)transliterator withString:(NSString*)string
 {
-    NSString* actionName = [NSString stringWithFormat:@"action-%@", [string substringFromIndex:[string length]-1]];
-    NSString* stateName = ([string length] <= 1 ? @"none" : [NSString stringWithFormat:@"state-%@", [string substringToIndex:[string length]-1]]);
-    NSString* fullStateName = [NSString stringWithFormat:@"state-%@", string];
+    NSString* safeActionId = [string substringFromIndex:[string length]-1];
+    safeActionId = [safeActionId stringByReplacingOccurrencesOfString:@"'" withString:@"(single-quote)"];
+    
+    NSString* safeStateId = [string substringToIndex:[string length]-1];
+    safeStateId = [safeStateId stringByReplacingOccurrencesOfString:@"'" withString:@"(single-quote)"];
+    
+    NSString* safeFullStateId = string;
+    safeFullStateId = [safeFullStateId stringByReplacingOccurrencesOfString:@"'" withString:@"(single-quote)"];
+    
+    NSString* actionName = [NSString stringWithFormat:@"action-%@", safeActionId];
+    NSString* stateName = ([string length] <= 1 ? @"none" : [NSString stringWithFormat:@"state-%@", safeStateId]);
+    NSString* fullStateName = [NSString stringWithFormat:@"state-%@", safeFullStateId];
+    
+    NSLog(@"%@", actionName);
     
     NSString* value = [transliterator currentValueForString:string];
     NSArray* nextLetters = [transliterator nextPossibleLettersForString:string];
@@ -297,7 +313,7 @@
             
             for (NSString* letter in nextLetters)
             {
-                return [self parseTransliterator:transliterator withString:[string stringByAppendingString:letter]];
+                [self parseTransliterator:transliterator withString:[string stringByAppendingString:letter]];
             }
         }
         else
