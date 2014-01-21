@@ -69,6 +69,11 @@
     return self;
 }
 
+-(NSArray*) startingLetters
+{
+    return [self.languageTree allKeys];
+}
+
 -(NSString*) currentValueForString:(NSString*)string
 {
     NSDictionary* tree = self.languageTree;
@@ -76,6 +81,7 @@
     return (resultString == [NSNull null] ? nil : resultString);
 }
 
+// TODO: accept nil
 -(NSArray*) nextPossibleLettersForString:(NSString*)string
 {
     NSDictionary* tree = self.languageTree;
@@ -88,6 +94,7 @@
     return ([[self nextPossibleLettersForString:string] count] > 0);
 }
 
+// TODO: accept nil
 -(NSArray*) nodeForString:(NSString*)string inTree:(NSDictionary*)tree
 {
     NSDictionary* currentTree = tree;

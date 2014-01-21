@@ -16,6 +16,7 @@
 -(id) initWithJsonPath:(NSString*)path;
 -(id) initWithDictionary:(NSDictionary*)dictionary; // designated initializer
 
+-(NSArray*) startingLetters;
 -(NSString*) currentValueForString:(NSString*)string;
 -(NSArray*) nextPossibleLettersForString:(NSString*)string;
 -(BOOL) hasNext:(NSString*)string;
