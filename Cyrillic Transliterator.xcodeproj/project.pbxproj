@@ -18,6 +18,10 @@
 		4E03E48E1889EDE40013490B /* RU.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E03E48D1889EDE40013490B /* RU.plist */; };
 		4E39BB8A188CAF4800225DE3 /* icon.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4E39BB88188CAF4800225DE3 /* icon.tiff */; };
 		4E39BB8B188CAF4800225DE3 /* icon@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4E39BB89188CAF4800225DE3 /* icon@2x.tiff */; };
+		4E3C2513188E1B5500C66952 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68AF3418870691006D4543 /* Foundation.framework */; };
+		4E3C2516188E1B5500C66952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C2515188E1B5500C66952 /* main.m */; };
+		4E3C251A188E1B5500C66952 /* Translit_to_Keylayout_Converter.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E3C2519188E1B5500C66952 /* Translit_to_Keylayout_Converter.1 */; };
+		4E3C2520188E1C0500C66952 /* RKConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C251F188E1C0500C66952 /* RKConverter.m */; };
 		4E5DA4FC188B79C7000073E5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E68AF2F18870691006D4543 /* Cocoa.framework */; };
 		4E5DA508188B79C7000073E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA507188B79C7000073E5 /* main.m */; };
 		4E5DA50F188B79C7000073E5 /* RBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5DA50E188B79C7000073E5 /* RBAppDelegate.m */; };
@@ -56,6 +60,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4E3C2510188E1B5500C66952 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				4E3C251A188E1B5500C66952 /* Translit_to_Keylayout_Converter.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4E03E4711889E80C0013490B /* RTTransliterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTTransliterator.h; sourceTree = "<group>"; };
 		4E03E4721889E80C0013490B /* RTTransliterator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTTransliterator.m; sourceTree = "<group>"; };
@@ -73,6 +90,12 @@
 		4E03E48D1889EDE40013490B /* RU.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = RU.plist; path = Common/RU.plist; sourceTree = SOURCE_ROOT; };
 		4E39BB88188CAF4800225DE3 /* icon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = icon.tiff; path = "Cyrillic Transliterator Input Method/Assets/icon.tiff"; sourceTree = SOURCE_ROOT; };
 		4E39BB89188CAF4800225DE3 /* icon@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = "icon@2x.tiff"; path = "Cyrillic Transliterator Input Method/Assets/icon@2x.tiff"; sourceTree = SOURCE_ROOT; };
+		4E3C2512188E1B5500C66952 /* Translit to Keylayout Converter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Translit to Keylayout Converter"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E3C2515188E1B5500C66952 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4E3C2518188E1B5500C66952 /* Translit to Keylayout Converter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Translit to Keylayout Converter-Prefix.pch"; sourceTree = "<group>"; };
+		4E3C2519188E1B5500C66952 /* Translit_to_Keylayout_Converter.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Translit_to_Keylayout_Converter.1; sourceTree = "<group>"; };
+		4E3C251E188E1C0500C66952 /* RKConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKConverter.h; sourceTree = "<group>"; };
+		4E3C251F188E1C0500C66952 /* RKConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKConverter.m; sourceTree = "<group>"; };
 		4E5DA4FB188B79C7000073E5 /* RapidTranslit Monitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RapidTranslit Monitor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5DA507188B79C7000073E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E5DA509188B79C7000073E5 /* RapidTranslit Monitor-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RapidTranslit Monitor-Prefix.pch"; sourceTree = "<group>"; };
@@ -113,6 +136,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4E3C250F188E1B5500C66952 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E3C2513188E1B5500C66952 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E5DA4F8188B79C7000073E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +234,26 @@
 			name = Secondary;
 			sourceTree = "<group>";
 		};
+		4E3C2514188E1B5500C66952 /* Translit to Keylayout Converter */ = {
+			isa = PBXGroup;
+			children = (
+				4E3C2515188E1B5500C66952 /* main.m */,
+				4E3C251E188E1C0500C66952 /* RKConverter.h */,
+				4E3C251F188E1C0500C66952 /* RKConverter.m */,
+				4E3C2519188E1B5500C66952 /* Translit_to_Keylayout_Converter.1 */,
+				4E3C2517188E1B5500C66952 /* Secondary */,
+			);
+			path = "Translit to Keylayout Converter";
+			sourceTree = "<group>";
+		};
+		4E3C2517188E1B5500C66952 /* Secondary */ = {
+			isa = PBXGroup;
+			children = (
+				4E3C2518188E1B5500C66952 /* Translit to Keylayout Converter-Prefix.pch */,
+			);
+			name = Secondary;
+			sourceTree = "<group>";
+		};
 		4E5DA501188B79C7000073E5 /* RapidTranslit Monitor */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +304,7 @@
 			children = (
 				4E68AF3518870691006D4543 /* Cyrillic Transliterator Input Method */,
 				4E5DA501188B79C7000073E5 /* RapidTranslit Monitor */,
+				4E3C2514188E1B5500C66952 /* Translit to Keylayout Converter */,
 				4EA1237F188C96C300A89CD7 /* Translit Service */,
 				4E03E4701889E80C0013490B /* Common */,
 				4E03E4751889E80C0013490B /* Tests */,
@@ -268,6 +320,7 @@
 				4E68AF4D18870691006D4543 /* Cyrillic Transliterator Tests.xctest */,
 				4E5DA4FB188B79C7000073E5 /* RapidTranslit Monitor.app */,
 				4EA12379188C96C300A89CD7 /* TranslitService.service */,
+				4E3C2512188E1B5500C66952 /* Translit to Keylayout Converter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -350,6 +403,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4E3C2511188E1B5500C66952 /* Translit to Keylayout Converter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E3C251D188E1B5500C66952 /* Build configuration list for PBXNativeTarget "Translit to Keylayout Converter" */;
+			buildPhases = (
+				4E3C250E188E1B5500C66952 /* Sources */,
+				4E3C250F188E1B5500C66952 /* Frameworks */,
+				4E3C2510188E1B5500C66952 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Translit to Keylayout Converter";
+			productName = "Translit to Keylayout Converter";
+			productReference = 4E3C2512188E1B5500C66952 /* Translit to Keylayout Converter */;
+			productType = "com.apple.product-type.tool";
+		};
 		4E5DA4FA188B79C7000073E5 /* RapidTranslit Monitor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E5DA527188B79C8000073E5 /* Build configuration list for PBXNativeTarget "RapidTranslit Monitor" */;
@@ -450,6 +520,7 @@
 			targets = (
 				4E68AF2B18870691006D4543 /* Cyrillic Transliterator Input Method */,
 				4E5DA4FA188B79C7000073E5 /* RapidTranslit Monitor */,
+				4E3C2511188E1B5500C66952 /* Translit to Keylayout Converter */,
 				4EA12378188C96C200A89CD7 /* TranslitService */,
 				4E68AF4C18870691006D4543 /* Cyrillic Transliterator Tests */,
 			);
@@ -501,6 +572,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4E3C250E188E1B5500C66952 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E3C2516188E1B5500C66952 /* main.m in Sources */,
+				4E3C2520188E1C0500C66952 /* RKConverter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E5DA4F7188B79C7000073E5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,6 +666,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4E3C251B188E1B5500C66952 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Translit to Keylayout Converter/Translit to Keylayout Converter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SDKROOT}/usr/include/libxml2",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4E3C251C188E1B5500C66952 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Translit to Keylayout Converter/Translit to Keylayout Converter-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"${SDKROOT}/usr/include/libxml2",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		4E5DA528188B79C8000073E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -783,6 +895,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4E3C251D188E1B5500C66952 /* Build configuration list for PBXNativeTarget "Translit to Keylayout Converter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E3C251B188E1B5500C66952 /* Debug */,
+				4E3C251C188E1B5500C66952 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4E5DA527188B79C8000073E5 /* Build configuration list for PBXNativeTarget "RapidTranslit Monitor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

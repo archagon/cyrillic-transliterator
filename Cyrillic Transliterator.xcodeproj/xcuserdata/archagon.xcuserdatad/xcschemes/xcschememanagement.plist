@@ -17,11 +17,21 @@
 		<key>Translit Service.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Translit to Keylayout Converter.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4E3C2511188E1B5500C66952</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4E5DA4FA188B79C7000073E5</key>
 		<dict>
 			<key>primary</key>
