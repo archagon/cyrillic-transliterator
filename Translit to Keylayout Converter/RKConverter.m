@@ -13,6 +13,9 @@
 // TODO: accomodate existing state changes
 // TODO: keyboards that output multiple characters per keystroke?
 // TODO: XML-safe character escaping
+// TODO: fix command-based shortcuts: dupe cmd?, prevent cmd from getting modified, add to all key sets, defaultindex?
+// TODO: fix greediness: здесь should not anticipate Ь
+// TODO: might not be greediness -- bake in "ayegore" test, make sure it works; might need to bake in a lot of state info
 
 @interface RKConverter ()
 
