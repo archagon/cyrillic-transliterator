@@ -16,7 +16,7 @@ So after a bit of research, I started working on a couple of solutions. The firs
 
 ## Techniques
 
-Transliteration can be done in one of five ways. (At the moment, three are functional.) My current preference is for the **keylayout file** method, along with the **Service** to deal with selected text.
+Transliteration can be done in one of five ways. (At the moment, three are functional.) My current preference is for the **input method** technique, along with the **Service** to deal with selected text. (For details, please see the relevant Wiki page.)
 
 ### Input Method
 
